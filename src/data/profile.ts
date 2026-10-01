@@ -5,6 +5,8 @@ export type LinkItem = {
   id: string;
   title: string;
   url: string;
+  /** 제목 앞에 붙는 아이콘 (이모지). 비워두면 표시하지 않습니다. */
+  icon?: string;
 };
 
 export type Profile = {
@@ -20,8 +22,8 @@ export const profile: Profile = {
   bio: "세계 최강 바이브코더",
   image: "",
   links: [
-    { id: "github", title: "GitHub", url: "https://github.com/" },
-    { id: "blog", title: "블로그", url: "https://example.com/blog" },
-    { id: "instagram", title: "Instagram", url: "https://instagram.com/" },
+    { id: "github", title: "깃허브", url: "https://github.com/kinaldo831117", icon: "🐙" },
+    { id: "blog", title: "블로그", url: "https://" },
+    { id: "email", title: "이메일", url: "mailto:kinaldo831117@gmail.com", icon: "✉️" },
   ],
 };
