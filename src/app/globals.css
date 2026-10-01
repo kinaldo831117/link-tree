@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #1e1e1e;
+  --background: #fbeee4;
+  --foreground: #3b2a24;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans), "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-}
-
-/* 태블릿 이상에서는 회색 배경 위에 카드 프레임을 띄웁니다 */
-@media (min-width: 40rem) {
-  :root {
-    --background: #f4f4f5;
-  }
+  --font-sans: var(--font-nunito), var(--font-gowun), "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  /* 고운돋움은 굵기가 하나뿐이라 가짜 굵게 처리를 막습니다 */
+  font-synthesis: none;
+  background:
+    radial-gradient(60rem 40rem at 10% -10%, #ffe1c7 0%, transparent 60%),
+    radial-gradient(50rem 40rem at 110% 30%, #fbd3d9 0%, transparent 55%),
+    radial-gradient(50rem 35rem at 30% 120%, #fde7c8 0%, transparent 60%),
+    linear-gradient(165deg, #fff6ee 0%, #fbe7dc 50%, #f8dcd8 100%);
+  background-attachment: fixed;
 }
